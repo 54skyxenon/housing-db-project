@@ -1,6 +1,4 @@
-# Boston Housing Development
-
-[!readme-banner.png](./assets/readme-banner.png)
+![readme-banner.png](./assets/readme-banner.png)
 
 Max Hayashi and I wrote a full-stack web application to investigate factors affecting housing prices in the
 Greater Boston area. This is our final project for CS3200: Database Design.
