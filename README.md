@@ -5,6 +5,8 @@ The frontend was bootstrapped with [Create React App](https://github.com/faceboo
 backend is written using the Django MVC framework, connected to a MySQL AWS instance.
 
 ## Installation and Usage
+You need to first add the `.env` file containing the secret key and database connection information to run the backend. 
+Just email me or Max asking for it. Also, ensure you are using Python 3 when running the backend.
 
 To start the frontend server, cd to `client/` and then you can:
 
