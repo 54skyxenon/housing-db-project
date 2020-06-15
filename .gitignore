@@ -2,8 +2,10 @@
 
 # django
 env
+.env
 *.pyc
 __pycache__
+db.sqlite3
 
 # dependencies
 /node_modules
