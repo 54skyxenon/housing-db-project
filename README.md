@@ -1,3 +1,7 @@
+# Boston Housing Development
+
+[!readme-banner.png](./assets/readme-banner.png)
+
 Max Hayashi and I wrote a full-stack web application to investigate factors affecting housing prices in the
 Greater Boston area. This is our final project for CS3200: Database Design.
 
@@ -38,3 +42,9 @@ To start the backend server, stay in this directory and then:
 ### `pip install -r requirements.txt`
 
 Installs the packages needed for the Django server to start.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
