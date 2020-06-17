@@ -1,1 +1,12 @@
 /* Use this if we need it */
+
+#map-container > div > div {
+    overflow: auto; 
+    position: relative;
+}
+
+#map-container > div > div > div {
+    margin: auto;
+    max-width: 70%;
+    max-height: 70%;
+}

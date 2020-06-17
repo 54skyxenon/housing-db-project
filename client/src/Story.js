@@ -6,7 +6,7 @@ import subway from './assets/subway-icon.svg';
 
 // The story section
 const Story = () => (
-    <div id="content-pane" style={styles}>
+    <div id="story-pane">
         <h1 style={styles.heading}>The Story</h1>
         <div id="image-container" style={styles.imageContainer}>
             <img src={apartment} style={styles.imageStyle} alt="apartment" />
@@ -14,16 +14,21 @@ const Story = () => (
             <img src={subway} style={styles.imageStyle} alt="subway" />
         </div>
         <div id="content" style={styles.content}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div style={{ textAlign: 'center', visibility: "hidden" }}>
+            Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a>,&nbsp;
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>,
+            and <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a> from&nbsp;
+            <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a>
         </div>
     </div>
 )
 
 const styles = {
-    backgroundColor: '#FAFDFF',
     imageStyle: {
         maxWidth: '20%'
     },
@@ -46,7 +51,6 @@ const styles = {
         fontFamily: 'Lato',
         color: '#71869F',
         paddingTop: '5%',
-        paddingBottom: '10%',
         paddingLeft: '20%',
         paddingRight: '20%'
     }
