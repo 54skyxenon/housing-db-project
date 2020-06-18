@@ -7,6 +7,7 @@ import banner from './assets/topbanner.jpeg';
 
 import Story from './Story';
 import Neighborhood from './Neighborhood';
+import LoincQuery from './LoincQuery';
 
 // The root level component
 const App = () => (
@@ -26,6 +27,7 @@ const App = () => (
 
     <div id="content">
       <Story />
+      <LoincQuery />
       <Neighborhood />
     </div>
   </div>

@@ -1,4 +1,4 @@
-import { GoogleApiWrapper, Map, InfoWindow } from 'google-maps-react';
+import { GoogleApiWrapper, Map } from 'google-maps-react';
 import React from 'react';
 // ...
 
@@ -13,7 +13,6 @@ export class MapContainer extends React.Component {
             }}
         >
             {/* <Marker onClick={this.onMarkerClick} name={'Current location'} /> */}
-            <InfoWindow onClose={this.onInfoWindowClose} />
         </Map>
     )
 }
