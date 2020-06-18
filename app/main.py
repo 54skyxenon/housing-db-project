@@ -1,13 +1,14 @@
 # A realllyy bad backend written by Brandon
+# It supports four hardcoded routes
 
 from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 import simplejson as json
+from flask_cors import CORS
 import os
-# from dotenv import load_dotenv
 
-# load_dotenv()
 app = Flask(__name__)
+CORS(app)
 
 # fix this issue
 app.config['MYSQL_DB'] = os.environ.get('DB_NAME')
