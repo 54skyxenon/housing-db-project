@@ -4,16 +4,17 @@ from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 import simplejson as json
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 app = Flask(__name__)
 
-app.config['MYSQL_DB'] = os.getenv('DB_NAME')
-app.config['MYSQL_USER'] = os.getenv('DB_USERNAME')
-app.config['MYSQL_PASSWORD'] = os.getenv('DB_PASSWORD')
-app.config['MYSQL_HOST'] = os.getenv('DB_ENDPOINT')
-app.config['MYSQL_PORT'] = int(os.getenv('DB_PORT'))
+# fix this issue
+app.config['MYSQL_DB'] = os.environ.get('DB_NAME')
+app.config['MYSQL_USER'] = os.environ.get('DB_USERNAME')
+app.config['MYSQL_PASSWORD'] = os.environ.get('DB_PASSWORD')
+app.config['MYSQL_HOST'] = os.environ.get('DB_ENDPOINT')
+app.config['MYSQL_PORT'] = int(os.environ.get('DB_PORT'))
 
 mysql = MySQL(app)
 
