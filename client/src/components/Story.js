@@ -6,7 +6,7 @@ import subway from '../assets/subway-icon.svg';
 
 // The story section
 const Story = () => (
-    <div id="story-pane">
+    <div className="story-pane">
         <h1 style={styles.heading}>The Story</h1>
         <div id="image-container" style={styles.imageContainer}>
             <img src={apartment} style={styles.imageStyle} alt="apartment" />
@@ -14,10 +14,10 @@ const Story = () => (
             <img src={subway} style={styles.imageStyle} alt="subway" />
         </div>
         <div id="content" style={styles.content}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Our goal for this project was to analyze Boston housing data for factors that affect where construction occurs. 
+            Construction is virtually everywhere on the Northeastern campus, especially regarding housing, so we were curious 
+            to see if that applied to the rest of Boston as a whole. In the process of using our web application, users will 
+            learn how variables like income and proximity to public transportation influence the building of new apartments. 
         </div>
         <div style={{ textAlign: 'center', visibility: "hidden" }}>
             Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a>,&nbsp;

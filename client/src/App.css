@@ -1,5 +1,5 @@
 /* Use this if we need it */
-
+/* 
 #map-container > div > div {
     overflow: auto; 
     position: relative;
@@ -9,7 +9,7 @@
     margin: auto;
     max-width: 70%;
     max-height: 70%;
-}
+} */
 
 .loinc-pie-chart > div {
     margin: auto;
@@ -18,6 +18,12 @@
 }
 
 .subway-histogram > div {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#new-apartments-histogram > div > div > div {
     margin: auto;
     width: 100%;
     height: 100%;

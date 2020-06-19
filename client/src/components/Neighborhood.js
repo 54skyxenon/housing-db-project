@@ -9,9 +9,10 @@ class Neighborhood extends React.Component {
         return (
             <div id="neighborhood-pane" >
                 <h1 style={styles.heading}>Boston Neighborhoods</h1>
-                <div id="map-container">
-                    <MapContainer />
+                <div id="neighborhood-content" style={styles.content}>
+                    Check them out for yourself!
                 </div>
+                <MapContainer />
             </div>
         )
     }

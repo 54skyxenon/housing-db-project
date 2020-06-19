@@ -29,7 +29,7 @@ class LoincQuery extends React.Component {
         }
 
         return (
-            <div id="story-pane">
+            <div className="story-pane">
                 <h1 style={styles.heading}>Low Income Housing</h1>
                 <div id="loinc-content" style={styles.content}>
                     What is the amount of low income housing compared to the overall population?

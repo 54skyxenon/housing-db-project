@@ -9,6 +9,8 @@ import Story from './components/Story';
 import Neighborhood from './components/Neighborhood';
 import LoincQuery from './components/queries/LoincQuery';
 import SubwayQuery from './components/queries/SubwayQuery';
+import MostApartmentsQuery from './components/queries/MostApartmentsQuery';
+import NewApartmentsQuery from './components/queries/NewApartmentsQuery';
 
 // The root level component
 const App = () => (
@@ -29,6 +31,8 @@ const App = () => (
       <Story />
       <SubwayQuery />
       <LoincQuery />
+      <MostApartmentsQuery />
+      <NewApartmentsQuery />
       <Neighborhood />
     </div>
   </div>

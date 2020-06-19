@@ -1,8 +1,8 @@
 import React from 'react';
 import { Chart } from "react-google-charts";
 
-// Component for the subway query section
-class SubwayQuery extends React.Component {
+// Component for the most apartments query section
+class MostApartmentsQuery extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,7 +14,7 @@ class SubwayQuery extends React.Component {
     componentDidMount() {
         this.setState({ isLoading: true });
 
-        fetch('https://cs3200-project-backend.herokuapp.com/subway')
+        fetch('https://cs3200-project-backend.herokuapp.com/most-apartments')
             .then(res => res.json())
             .then(data => this.setState({ hits: data, isLoading: false }));
 
@@ -29,36 +29,30 @@ class SubwayQuery extends React.Component {
             return (<p>Loading ...</p>);
         }
 
-        let cityData = [['Neighborhood', 'Distance']]
+        let cityData = [['Neighborhood', '# Apartments']]
         hits.forEach(hit => {
-            cityData.push([hit.name, Math.trunc(hit['avg(distance)'])])
+            cityData.push([hit.name, hit['num_apartments']])
         })
 
         return (
             <div className="story-pane">
-                <h1 style={styles.heading}>Subway Proximity</h1>
-                <div id="subway-content" style={styles.content}>
-                    What is the average subway distance from new constructions?
-                    <div className='subway-histogram'>
+                <h1 style={styles.heading}>Most Apartments</h1>
+                <div id="most-apartments-content" style={styles.content}>
+                    Which neighborhoods are building the most apartments?
+                    <div className='most-apartments-bar-chart'>
                         <Chart
                             chartType="BarChart"
                             loader={<div>Loading Chart</div>}
                             data={cityData}
                             options={{
-                                title: 'Average Distance (meters)',
+                                title: 'Apartment units in each neighborhood',
                                 chartArea: { width: '50%', height: '80%' },
                                 isStacked: true,
-                                hAxis: {
-                                    title: 'Distance',
-                                    minValue: 0,
-                                },
                                 vAxis: { title: 'Neighborhood' },
                                 width: '1000',
                                 height: '1000',
                                 bar: { groupWidth: '60%' }
                             }}
-                            // For tests
-                            rootProps={{ 'data-testid': '3' }}
                         />
                     </div>
                 </div>
@@ -85,4 +79,4 @@ const styles = {
     }
 }
 
-export default SubwayQuery;
+export default MostApartmentsQuery;
