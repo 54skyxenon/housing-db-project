@@ -1,7 +1,7 @@
 import { GoogleApiWrapper, Map } from 'google-maps-react';
 import React from 'react';
-// ...
 
+// Container for the Google Maps view
 export class MapContainer extends React.Component {
     render = () => (
         <Map

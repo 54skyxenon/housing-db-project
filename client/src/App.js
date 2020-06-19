@@ -5,9 +5,10 @@ import { Hero, ScrollDownIndicator } from 'react-landing-page';
 
 import banner from './assets/topbanner.jpeg';
 
-import Story from './Story';
-import Neighborhood from './Neighborhood';
-import LoincQuery from './LoincQuery';
+import Story from './components/Story';
+import Neighborhood from './components/Neighborhood';
+import LoincQuery from './components/queries/LoincQuery';
+import SubwayQuery from './components/queries/SubwayQuery';
 
 // The root level component
 const App = () => (
@@ -20,13 +21,13 @@ const App = () => (
         backgroundImage={banner} >
         <Heading style={styles.heading}>Boston Housing Development</Heading>
         <Heading style={styles.subheading} mt={3}>(Created by: Brandon Liang and Max Hayashi)</Heading>
-        {/* <CallToAction href="/getting-started" mt={3}>Continue →</CallToAction> */}
         <ScrollDownIndicator />
       </Hero>
     </div>
 
     <div id="content">
       <Story />
+      <SubwayQuery />
       <LoincQuery />
       <Neighborhood />
     </div>

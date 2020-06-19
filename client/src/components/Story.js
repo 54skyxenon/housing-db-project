@@ -1,8 +1,8 @@
 import React from 'react';
 
-import apartment from './assets/apartment-icon.svg';
-import money from './assets/money-icon.svg';
-import subway from './assets/subway-icon.svg';
+import apartment from '../assets/apartment-icon.svg';
+import money from '../assets/money-icon.svg';
+import subway from '../assets/subway-icon.svg';
 
 // The story section
 const Story = () => (
