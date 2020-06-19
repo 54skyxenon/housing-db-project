@@ -1,3 +1,5 @@
+# Boston Housing Development
+
 ![readme-banner.png](./client/src/assets/topbanner.jpeg)
 
 Max Hayashi and I wrote a full-stack web application to investigate factors affecting housing development in the
