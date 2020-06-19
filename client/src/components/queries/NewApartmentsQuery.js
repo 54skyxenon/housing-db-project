@@ -29,8 +29,6 @@ class NewApartmentsQuery extends React.Component {
             return (<p>Loading ...</p>);
         }
 
-        console.log(hits)
-
         let cityData = [['Building Type', 'Distance (meters)']]
         hits.forEach(hit => {
             cityData.push([hit['Apartments'], hit['avg(distance)']])

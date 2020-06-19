@@ -18,39 +18,40 @@ class LoincQuery extends React.Component {
             .then(res => res.json())
             .then(data => this.setState({ hits: data, isLoading: false }));
 
-        this.setState({hits: JSON.parse(JSON.stringify(this.state.hits))})
+        this.setState({ hits: JSON.parse(JSON.stringify(this.state.hits)) })
     }
 
     render() {
         const { isLoading, hits } = this.state;
-
         if (isLoading) {
             return (<p>Loading ...</p>);
         }
+
+        console.log(hits)
+
+        let cityData = [['Neighborhood', 'Low Income Units', 'Working Pop.']]
+        hits.forEach(hit => {
+            cityData.push([hit.name, hit.total_income_restricted_units, hit.working_population])
+        })
 
         return (
             <div className="story-pane">
                 <h1 style={styles.heading}>Low Income Housing</h1>
                 <div id="loinc-content" style={styles.content}>
                     What is the amount of low income housing compared to the overall population?
-                        {hits.map(hit =>
-                            <div className='loinc-pie-chart' key={hit.objectID}>
-                                {hit.working_population - hit.total_income_restricted_units > 0 ? (
-                                <Chart
-                                    chartType="PieChart"
-                                    loader={<div>Loading Chart</div>}
-                                    data={[
-                                        ['Task', 'Hours per Day'],
-                                        ['Normal Units', hit.working_population - hit.total_income_restricted_units],
-                                        ['Income Restricted Units', hit.total_income_restricted_units]
-                                    ]}
-                                    options={{
-                                        title: hit.name 
-                                    }}
-                                />
-                            ) : <p> No Data For: {hit.name} </p>}
-                            </div>
-                        )}
+                    <Chart
+                        width={'100%'}
+                        height={'1000px'}
+                        chartType="Bar"
+                        loader={<div>Loading Chart</div>}
+                        data={cityData}
+                        options={{
+                            chart: {
+                                title: 'Comparing Low-Income Housing Units to Working Population',
+                            },
+                            legend: {position: 'none'}
+                        }}
+                    />
                 </div>
             </div>
         )

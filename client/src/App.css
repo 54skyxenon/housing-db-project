@@ -1,15 +1,4 @@
 /* Use this if we need it */
-/* 
-#map-container > div > div {
-    overflow: auto; 
-    position: relative;
-}
-
-#map-container > div > div > div {
-    margin: auto;
-    max-width: 70%;
-    max-height: 70%;
-} */
 
 .loinc-pie-chart > div {
     margin: auto;
@@ -21,6 +10,10 @@
     margin: auto;
     width: 100%;
     height: 100%;
+}
+
+#loinc-content > div {
+    margin-top: 10%;
 }
 
 #new-apartments-histogram > div > div > div {
